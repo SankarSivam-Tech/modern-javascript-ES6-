@@ -425,4 +425,14 @@ console.log(res1);
 
 const title=["Leo","Singam","Puli"]
 console.log(title.reverse()); //['Puli', 'Singam', 'Leo']
+console.log(title); //['Puli', 'Singam', 'Leo']
+
+
+//toReversed()
+
+const tit=["Master","Jailer","Coolie"]
+console.log(tit.toReversed()); // ['Coolie', 'Jailer', 'Master']
+console.log(tit); //['Master', 'Jailer', 'Coolie']
+
+
 
