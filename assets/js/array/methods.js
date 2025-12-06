@@ -353,6 +353,25 @@ console.log(animal.lastIndexOf("Lion")); //4
 console.log(Array.isArray([1,2,3,4])); //true
 console.log(Array.isArray('[1,2,3,4]')); //false
 
+// Array.prototype.join()
+// join() converts all elements of an array into a single string, with a separator between each element.
+
+// Syntax
+// array.join(separator);
+
+// separator (optional) → what you want between the array items
+// Default separator = comma ( , )
+
+const skills = ["HTML", "CSS", "JavaScript"];
+console.log(skills.join(" ")); //HTML CSS JavaScript
+console.log(skills.join("-")); //HTML-CSS-JavaScript
+
+const newWord = ["JavaScript", "is", "awesome"];
+console.log(newWord.join(" ")); //JavaScript is awesome
+
+
+
+
 
 
 
