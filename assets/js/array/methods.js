@@ -460,17 +460,18 @@ if (exists) {
 // sort()
 // sort() is a method used to arrange (sort) the elements of an array.
 // By default, it sorts elements as strings, NOT numbers.
+// sort() modifies the original array
 
-const num1=[2,3,5,7,11,13,17,19,23]
-const ascNum=num1.sort((a,b)=>a-b)
+const num1 = [2, 3, 5, 7, 11, 13, 17, 19, 23];
+const ascNum = num1.sort((a, b) => a - b);
 console.log(ascNum); //[2, 3, 5, 7, 11, 13, 17, 19, 23]
 
 const students = [
   { name: "John", marks: 50 },
   { name: "Asha", marks: 90 },
-  { name: "Kumar", marks: 70 }
+  { name: "Kumar", marks: 70 },
 ];
-students.sort((a,b)=>b.marks-a.marks)
+students.sort((a, b) => b.marks - a.marks);
 console.log(students);
 // [
 //   { name: "Asha", marks: 90 },
@@ -478,3 +479,10 @@ console.log(students);
 //   { name: "John", marks: 50 }
 // ]
 
+//toSorted()
+// toSorted() returns the new array
+
+const num2 = [15, 17, 23, 29, 31];
+const desNum = num2.toSorted((a, b) => b - a);
+console.log(desNum);
+console.log(num2);
