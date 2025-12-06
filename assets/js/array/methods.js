@@ -456,3 +456,25 @@ if (exists) {
 // Returns	true if any one element passes	true only if 100% of elements pass
 // Stops Early?	Yes — stops when the first matching element is found	Yes — stops when the first non-matching element is found
 // Use Cases	"Does any element satisfy this condition?"	"Do all elements satisfy this condition?"
+
+// sort()
+// sort() is a method used to arrange (sort) the elements of an array.
+// By default, it sorts elements as strings, NOT numbers.
+
+const num1=[2,3,5,7,11,13,17,19,23]
+const ascNum=num1.sort((a,b)=>a-b)
+console.log(ascNum); //[2, 3, 5, 7, 11, 13, 17, 19, 23]
+
+const students = [
+  { name: "John", marks: 50 },
+  { name: "Asha", marks: 90 },
+  { name: "Kumar", marks: 70 }
+];
+students.sort((a,b)=>b.marks-a.marks)
+console.log(students);
+// [
+//   { name: "Asha", marks: 90 },
+//   { name: "Kumar", marks: 70 },
+//   { name: "John", marks: 50 }
+// ]
+
