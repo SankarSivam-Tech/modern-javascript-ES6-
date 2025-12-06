@@ -541,5 +541,16 @@ const string=data2.toString()
 console.log(string); //10,true,[object Object]
 
 
+// with()
+
+const data3=[1,2,3,4,5]
+const res2=data3.with(2,"TWO")
+console.log(res2); //[1, 2, 'TWO', 4, 5]
+
+data3[4]="FIVE"
+console.log(data3); //[1, 2, 3, 4, 'FIVE']
+
+
+
 
 
