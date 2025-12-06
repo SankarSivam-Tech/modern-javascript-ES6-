@@ -449,3 +449,10 @@ const exists = emails.some((email) => email === "a@gmail.com");
 if (exists) {
   console.log("email already exists"); //email already exists
 }
+
+// Difference Between some() and every()
+// Feature	some()	every()
+// Meaning	Checks if at least one element matches a condition	Checks if all elements match a condition
+// Returns	true if any one element passes	true only if 100% of elements pass
+// Stops Early?	Yes — stops when the first matching element is found	Yes — stops when the first non-matching element is found
+// Use Cases	"Does any element satisfy this condition?"	"Do all elements satisfy this condition?"
