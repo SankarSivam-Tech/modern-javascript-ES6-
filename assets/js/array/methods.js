@@ -289,4 +289,72 @@ console.log(mapped); //[[1, 2], [2, 4], [3, 6]]
 // Using flatMap() (solution: flat array)
 const numb = [1, 2, 3];
 const flattened = numb.flatMap((n) => [n, n * 2]);
-console.log(flattened);  //[1, 2, 2, 4, 3, 6]
+console.log(flattened); //[1, 2, 2, 4, 3, 6]
+
+// Array.from()
+// Array.from() is a built-in JavaScript method that creates a new array from:
+// Any array-like object (something with length, e.g., DOM NodeList, arguments)
+// Any iterable (string, Set, Map, etc.)
+// You can also apply a mapping function inside it (like .map())
+
+// Syntax
+// Array.from(arrayLike, mapFunction); //Both parameters are optional.
+
+const name = "VEERA";
+const letters = Array.from(name);
+console.log(letters); //['V', 'E', 'E', 'R', 'A']
+
+const skeleton = { length: 5 };
+const skeletons = Array.from(skeleton, (s, i) => i + 1);
+console.log(skeletons); //[1,2,3,4,5]
+
+//Array.of()
+// Array.of() creates a new array from the values you pass into it.
+// 📌 Important:
+// It creates an array exactly with the values you give — nothing more, nothing less.
+
+//Syntax
+// Array.of(element1, element2, element3, ...)
+
+const ids = Array.of("sankar", 25, { name: "veera" }, true);
+console.log(ids); //['sankar', 25, {…}, true]
+
+// Array.includes()
+
+const pets = ["cats", "fish", "dogs"];
+console.log(pets.includes("dog")); //false
+console.log(pets.includes("dogs")); //true
+
+//Array.indexOf()
+// Array.indexOf() is used to find the position (index) of an element inside an array.
+// If the element exists → returns its index
+// If the element does NOT exist → returns -1
+// It searches the array from left to right.
+
+// Syntax
+// array.indexOf(searchValue, startIndex);
+
+const animals=["Lion","Tiger","Elephant","crocodile"]
+console.log(animals.indexOf("Lion")); //0
+console.log(animals.indexOf("Elephant")); //2
+console.log(animals.indexOf("giraffe")); //-1
+
+const findLetters = ["a", "b", "c", "b", "d"];
+console.log(findLetters.indexOf("b", 2)); //3
+
+// Array.lastIndesOf()
+// It searches the array from right to left.
+
+const animal=["Lion","Tiger","Elephant","crocodile","Lion"]
+console.log(animal.lastIndexOf("Lion")); //4
+
+// Array.isArray()
+
+console.log(Array.isArray([1,2,3,4])); //true
+console.log(Array.isArray('[1,2,3,4]')); //false
+
+
+
+
+
+
