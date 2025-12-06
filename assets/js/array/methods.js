@@ -334,7 +334,7 @@ console.log(pets.includes("dogs")); //true
 // Syntax
 // array.indexOf(searchValue, startIndex);
 
-const animals=["Lion","Tiger","Elephant","crocodile"]
+const animals = ["Lion", "Tiger", "Elephant", "crocodile"];
 console.log(animals.indexOf("Lion")); //0
 console.log(animals.indexOf("Elephant")); //2
 console.log(animals.indexOf("giraffe")); //-1
@@ -345,13 +345,13 @@ console.log(findLetters.indexOf("b", 2)); //3
 // Array.lastIndesOf()
 // It searches the array from right to left.
 
-const animal=["Lion","Tiger","Elephant","crocodile","Lion"]
+const animal = ["Lion", "Tiger", "Elephant", "crocodile", "Lion"];
 console.log(animal.lastIndexOf("Lion")); //4
 
 // Array.isArray()
 
-console.log(Array.isArray([1,2,3,4])); //true
-console.log(Array.isArray('[1,2,3,4]')); //false
+console.log(Array.isArray([1, 2, 3, 4])); //true
+console.log(Array.isArray("[1,2,3,4]")); //false
 
 // Array.prototype.join()
 // join() converts all elements of an array into a single string, with a separator between each element.
@@ -369,11 +369,38 @@ console.log(skills.join("-")); //HTML-CSS-JavaScript
 const newWord = ["JavaScript", "is", "awesome"];
 console.log(newWord.join(" ")); //JavaScript is awesome
 
+// Array.prototype.reduce()
+// reduce() takes an array and reduces it to a single value.
+// It is one of the most powerful array methods in JavaScript.
+// it takes many values and gives single value.
 
+// Syntax
+// array.reduce((accumulator, currentValue, index, array) => {
+//     // return something
+// }, initialValue);
 
+// accumulator (acc) → stores the result
+// currentValue (curr) → current element
+// initialValue → starting value (optional but important)
 
+const nums = [10, 20, 30];
+const res = nums.reduce((acc, curr) => {
+  return acc + curr;
+}, 0);
+console.log(res);
 
+const cart = [
+  { item: "Shirt", price: 500 },
+  { item: "Shoe", price: 1500 },
+  { item: "Pant", price: 900 },
+];
+const tot = cart.reduce((acc, curr) => {
+  return acc + curr.price;
+}, 0);
+console.log(tot);
 
-
-
-
+const numbs = [10, 15, 20, 30];
+const max = numbs.reduce((acc, curr) => {
+  return curr > acc ? curr : acc;
+}, numbs[0]);
+console.log(max); //30
