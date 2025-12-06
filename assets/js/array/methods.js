@@ -486,3 +486,51 @@ const num2 = [15, 17, 23, 29, 31];
 const desNum = num2.toSorted((a, b) => b - a);
 console.log(desNum);
 console.log(num2);
+
+//toLocaleString()
+// toLocaleString() is a method used to convert numbers, dates, or strings into a human-friendly, region-based (localized) format.
+// It formats values based on the user’s locale (country + language settings).
+
+// Why do we use it?
+// Because different countries format numbers and dates differently.
+// Example:
+// India uses: 1,00,000
+// US uses: 100,000
+// Germany uses: 100.000
+// toLocaleString() automatically formats according to the locale we choose.
+
+// Syntax
+// value.toLocaleString(locale, options)
+// locale → country/language code ("en-IN", "en-US", "de-DE" etc.)
+// options → formatting style (currency, percentage, etc.)
+
+// 1.Number Formatting
+// Default formatting (based on our system locale)
+const digit=(1000000).toLocaleString();
+console.log(digit); //1,000,000
+
+// Formatting in Indian style (en-IN)
+const dig=(10000000).toLocaleString("en-IN")
+console.log(dig); //1,00,00,000
+
+// 2.Currency Formatting
+const curr=(75000).toLocaleString("en-IN",{
+  style:"currency",
+  currency:"INR"
+})
+console.log(curr); //₹75,000.00
+
+// 3. Date Formatting
+const d = new Date("2025-12-06");
+console.log(d.toLocaleString()); //12/6/2025, 5:30:00 AM
+
+const formattedDate=d.toLocaleString("en-IN",{
+  day:"2-digit",
+  month:"long",
+  year:"numeric"
+})
+
+console.log(formattedDate); //06 December 2025
+
+
+
