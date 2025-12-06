@@ -404,3 +404,19 @@ const max = numbs.reduce((acc, curr) => {
   return curr > acc ? curr : acc;
 }, numbs[0]);
 console.log(max); //30
+
+//reduceRight()
+
+const item = [10, 20, 30, 40, 50];
+const res1 = item.reduceRight((acc, curr) => {
+  console.log(acc, curr);
+  return acc+curr
+}, 0);
+
+console.log(res1);
+//0 50
+// 50 40
+// 90 30
+// 120 20
+// 140 10
+// 150
