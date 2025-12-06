@@ -532,5 +532,14 @@ const formattedDate=d.toLocaleString("en-IN",{
 
 console.log(formattedDate); //06 December 2025
 
+// toString()
+// toString() is a method that converts a value into a string.
+// Every data type in JavaScript (Number, Array, Date, Boolean, Object, etc.) has its own toString() method.
+
+const data2=[10,true,{name:"Veera"}]
+const string=data2.toString()
+console.log(string); //10,true,[object Object]
+
+
 
 
