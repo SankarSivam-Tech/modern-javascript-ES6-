@@ -420,3 +420,9 @@ console.log(res1);
 // 120 20
 // 140 10
 // 150
+
+// reverse()
+
+const title=["Leo","Singam","Puli"]
+console.log(title.reverse()); //['Puli', 'Singam', 'Leo']
+
