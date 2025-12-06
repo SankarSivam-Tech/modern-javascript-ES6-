@@ -410,7 +410,7 @@ console.log(max); //30
 const item = [10, 20, 30, 40, 50];
 const res1 = item.reduceRight((acc, curr) => {
   console.log(acc, curr);
-  return acc+curr
+  return acc + curr;
 }, 0);
 
 console.log(res1);
@@ -423,16 +423,29 @@ console.log(res1);
 
 // reverse()
 
-const title=["Leo","Singam","Puli"]
+const title = ["Leo", "Singam", "Puli"];
 console.log(title.reverse()); //['Puli', 'Singam', 'Leo']
 console.log(title); //['Puli', 'Singam', 'Leo']
 
-
 //toReversed()
 
-const tit=["Master","Jailer","Coolie"]
+const tit = ["Master", "Jailer", "Coolie"];
 console.log(tit.toReversed()); // ['Coolie', 'Jailer', 'Master']
 console.log(tit); //['Master', 'Jailer', 'Coolie']
 
+//some()
+// some() checks if at least one element in the array passes a condition.
+//  If any one element satisfies the condition → returns true
+//  If none satisfies → returns false
 
+const values = [10, 15, -20, 30];
+console.log(values.some((v) => v < 0)); //true
 
+const mixed = [10, 20, "hello", 30];
+console.log(mixed.some((m) => typeof m === "string")); //true
+
+const emails = ["a@gmail.com", "b@gmail.com"];
+const exists = emails.some((email) => email === "a@gmail.com");
+if (exists) {
+  console.log("email already exists"); //email already exists
+}
