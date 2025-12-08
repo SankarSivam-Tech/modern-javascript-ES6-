@@ -34,3 +34,8 @@ const[phy,,mat]=[75,85,95]
 
 console.log(phy,mat); //75 95
 
+// Discarding Extra Elements
+const [bot,zoo]=[75,85,95]
+console.log(bot,zoo); //75 85
+
+
