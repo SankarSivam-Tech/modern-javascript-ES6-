@@ -79,3 +79,18 @@ console.log(fullName); //['Veera', 'Sankar']
 
 const [my1stName, my2ndName] = getFullName();
 console.log(my1stName, my2ndName); //Veera Sankar
+
+//On Loops
+const myTeam = [
+  ["Veera", "Sankar"],
+  ["Hari", "Krishnan"],
+];
+console.log(myTeam); //[Array(2), Array(2)]
+
+for (let team of myTeam) {
+  console.log(team); // ['Veera', 'Sankar'] ['Hari', 'Krishnan']
+}
+
+for (let [firstName, lastName] of myTeam) {
+  console.log(firstName, lastName); //Veera Sankar Hari Krishnan
+}
