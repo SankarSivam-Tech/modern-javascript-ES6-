@@ -48,4 +48,12 @@ console.log(myNames); //Sankar
 const [myNam="Sankar"]=["Veera"]
 console.log(myNam); //Veera
 
+// Rest Syntax
+const[...nos]=[1,2,3,4,5,6,7,8,9,10]
+console.log(nos); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const[one,two,...remNos]=[1,2,3,4,5,6,7,8,9,10]
+console.log(one,two,remNos); //1 2 (8) [3, 4, 5, 6, 7, 8, 9, 10]
+
+
 
