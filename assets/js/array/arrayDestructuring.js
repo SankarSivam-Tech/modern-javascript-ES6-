@@ -28,3 +28,9 @@ console.log("Economy", Economy); //Economy 100
 const [Tam, Eng, Economics] = [80, 90];
 
 console.log(Tam, Eng, Economics); //80 90 undefined
+
+//Skipping Elements
+const[phy,,mat]=[75,85,95]
+
+console.log(phy,mat); //75 95
+
