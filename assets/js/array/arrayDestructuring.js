@@ -38,4 +38,14 @@ console.log(phy,mat); //75 95
 const [bot,zoo]=[75,85,95]
 console.log(bot,zoo); //75 85
 
+// Default Values
+const [myName]=["Veera"]
+console.log(myName); //Veera
+
+const [myNames="Sankar"]=[]
+console.log(myNames); //Sankar
+
+const [myNam="Sankar"]=["Veera"]
+console.log(myNam); //Veera
+
 
