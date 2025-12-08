@@ -30,30 +30,33 @@ const [Tam, Eng, Economics] = [80, 90];
 console.log(Tam, Eng, Economics); //80 90 undefined
 
 //Skipping Elements
-const[phy,,mat]=[75,85,95]
+const [phy, , mat] = [75, 85, 95];
 
-console.log(phy,mat); //75 95
+console.log(phy, mat); //75 95
 
 // Discarding Extra Elements
-const [bot,zoo]=[75,85,95]
-console.log(bot,zoo); //75 85
+const [bot, zoo] = [75, 85, 95];
+console.log(bot, zoo); //75 85
 
 // Default Values
-const [myName]=["Veera"]
+const [myName] = ["Veera"];
 console.log(myName); //Veera
 
-const [myNames="Sankar"]=[]
+const [myNames = "Sankar"] = [];
 console.log(myNames); //Sankar
 
-const [myNam="Sankar"]=["Veera"]
+const [myNam = "Sankar"] = ["Veera"];
 console.log(myNam); //Veera
 
 // Rest Syntax
-const[...nos]=[1,2,3,4,5,6,7,8,9,10]
+const [...nos] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(nos); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const[one,two,...remNos]=[1,2,3,4,5,6,7,8,9,10]
-console.log(one,two,remNos); //1 2 (8) [3, 4, 5, 6, 7, 8, 9, 10]
+const [one, two, ...remNos] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(one, two, remNos); //1 2 (8) [3, 4, 5, 6, 7, 8, 9, 10]
 
-
-
+// Swapping Variables
+let a = 10;
+let b = 20;
+[a, b] = [b, a];
+console.log(a, b); //20 10
