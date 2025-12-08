@@ -94,3 +94,50 @@ for (let team of myTeam) {
 for (let [firstName, lastName] of myTeam) {
   console.log(firstName, lastName); //Veera Sankar Hari Krishnan
 }
+
+// Practice:
+// 1.Display the name of each object in userDetails using Array Destructuring using functions
+
+const userDetails = [
+  { id: 1, userName: "Veera", isActive: true },
+  { id: 2, userName: "Hari", isActive: true },
+];
+
+// Method:1
+function displayName([...arr]) {
+  arr.forEach(({ userName }) => console.log(userName));
+}
+displayName(userDetails);
+
+// Method:2
+function displayNames([{ userName: name1 }, { userName: name2 }]) {
+  console.log(name1); //Veera
+  console.log(name2); //Hari
+}
+displayNames(userDetails);
+
+// 2.Use destructuring to extract info from the API response
+
+const resp = {
+  status: 200,
+  vehicles: ["car", "bike", "plane", "train"],
+};
+
+// Method:1
+const {
+  status,
+  vehicles: [v1, v2, v3, v4],
+} = resp;
+console.log(v1, v2, v3, v4); //car bike plane train
+
+// Method:2
+function displayVehicles({ vehicles }) {
+  vehicles.forEach((item) => console.log(item));
+}
+displayVehicles(resp); // car bike plane train
+
+// Method:3
+const [V1, V2, V3, V4] = resp.vehicles;
+console.log(V1, V2, V3, V4); // car bike plane train
+
+
