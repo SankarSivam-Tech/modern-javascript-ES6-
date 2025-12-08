@@ -68,3 +68,14 @@ console.log(a, b); //20 10
 
 const [no1, no2, [no3, no4], no5, no6] = [1, 2, [3, 4], 5, 6];
 console.log(no1, no2, no3, no4, no5, no6); //1 2 3 4 5 6
+
+//Array Destructuring on Functions
+function getFullName() {
+  return ["Veera", "Sankar"];
+}
+
+const fullName = getFullName();
+console.log(fullName); //['Veera', 'Sankar']
+
+const [my1stName, my2ndName] = getFullName();
+console.log(my1stName, my2ndName); //Veera Sankar
