@@ -60,3 +60,11 @@ let a = 10;
 let b = 20;
 [a, b] = [b, a];
 console.log(a, b); //20 10
+
+//Nesting Array Destructuring
+
+// const [no1,no2,no3and4,no5,no6]=[1,2,[3,4],5,6]
+// console.log(no1,no2,no3and4,no5,no6); //1 2 (2) [3, 4] 5 6
+
+const [no1, no2, [no3, no4], no5, no6] = [1, 2, [3, 4], 5, 6];
+console.log(no1, no2, no3, no4, no5, no6); //1 2 3 4 5 6
