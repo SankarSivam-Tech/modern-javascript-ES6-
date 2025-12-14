@@ -40,7 +40,7 @@ const lockHouse = () => {
     console.log("the password is", password); //the password is 1234
   };
 
-  return openHouse();
+  return openHouse;
 };
 
 const myAccess = lockHouse();
